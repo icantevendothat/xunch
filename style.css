@@ -323,3 +323,65 @@ h1, .logo {
 .image-grid img:hover {
     transform: scale(1.03); 
 }
+
+@media screen and (max-width: 768px) {
+    .logo {
+        max-width: 350px; /* Reduce the logo size */
+        transform: translateX(0); /* Center the logo */
+        margin: 0 auto; /* Center horizontally */
+        margin-bottom: 130px;
+        margin-top: -130px;
+    }
+
+    .tv {
+        width: 70%; 
+    }
+
+    .h1 {
+        top: 300px;
+    }
+
+    .content {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tv.expand {
+        transform: scale(5);
+    }
+
+    .image-grid {
+        column-count: 2; /* Reduce the number of columns to 2 */
+        column-gap: 10px; /* Adjust the gap between columns, if necessary */
+    }
+
+    .footer-logo {
+        max-height: 250px;
+        margin-bottom: -160px;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .menu-container {
+        position: relative;
+        width: 280px;
+        height: 50px;
+        margin-top: 70px;
+    }
+
+    .menu-section {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 30px;
+        width: 30px; 
+        cursor: pointer;
+    }
+
+    .menu-section:nth-child(1) { left: 20px; }
+    .menu-section:nth-child(2) { left: 80px; }
+    .menu-section:nth-child(3) { left: 130px; }
+    .menu-section:nth-child(4) { left: 170px; }
+    .menu-section:nth-child(5) { left: 220px; }
+
+}
