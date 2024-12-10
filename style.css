@@ -330,7 +330,7 @@ h1, .logo {
         transform: translateX(0); /* Center the logo */
         margin: 0 auto; /* Center horizontally */
         margin-bottom: 130px;
-        margin-top: -130px;
+        margin-top: -100px;
     }
 
     .tv {
@@ -383,5 +383,32 @@ h1, .logo {
     .menu-section:nth-child(3) { left: 130px; }
     .menu-section:nth-child(4) { left: 170px; }
     .menu-section:nth-child(5) { left: 220px; }
+
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: -70px;
+    }
+    
+    .about-content img {
+        max-width: 250px;
+        max-height: auto;
+    }
+    
+    .about-content p {
+        flex-grow: 1;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: white;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-top: -300px;
+        max-width: 300px;
+    }
 
 }
