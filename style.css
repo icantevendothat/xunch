@@ -199,7 +199,7 @@ h1, .logo {
     display: none;
 }
 
-.image-grid-container::-webkit-scrollbar {
+.grid-container::-webkit-scrollbar {
     display: none; 
 }
   
@@ -327,9 +327,9 @@ h1, .logo {
 
 @media screen and (max-width: 768px) {
     .logo {
-        max-width: 350px; /* Reduce the logo size */
-        transform: translateX(0); /* Center the logo */
-        margin: 0 auto; /* Center horizontally */
+        max-width: 350px;
+        transform: translateX(-8px);
+        margin: 0 auto; 
         margin-bottom: 130px;
         margin-top: -100px;
     }
@@ -423,6 +423,10 @@ h1, .logo {
         z-index: 2;
         opacity: 0;
         transition: opacity 2s ease;
+    }
+    
+    .grid-container::before {
+        height: 77%;
     }
 
 }
