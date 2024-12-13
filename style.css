@@ -299,6 +299,15 @@ h1, .logo {
     text-align: left;
 }  
 
+.expanded-caption a {
+    color: #3d03ff;
+    text-decoration: underline;
+}
+
+.expanded-caption a:hover {
+    color: #5a4a8f;
+}
+
 .close-btn {
     position: absolute;
     top: 10px;

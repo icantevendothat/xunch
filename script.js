@@ -126,20 +126,20 @@ document.addEventListener("DOMContentLoaded", () => {
       <img src="" alt="">
     </div>
     <div class="expanded-caption"></div>
-    <button class="close-btn">x</button>  <!-- Close button added here -->
+    <button class="close-btn">x</button>
   `;
   body.appendChild(expandedContainer);
 
   const expandedImage = expandedContainer.querySelector(".expanded-image img");
   const expandedCaption = expandedContainer.querySelector(".expanded-caption");
   const closeButton = expandedContainer.querySelector(".close-btn");
-  let currentIndex = -1; 
+  let currentIndex = -1;
 
   const updateExpandedContent = (index) => {
     const image = gridImages[index];
     if (image) {
       expandedImage.src = image.src;
-      expandedCaption.textContent = image.dataset.caption || "No caption available";
+      expandedCaption.innerHTML = image.dataset.caption || "No caption available"; 
     }
   };
 
@@ -170,7 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
       updateExpandedContent(currentIndex);
     } else if (e.key === "Escape") {
       expandedContainer.classList.remove("active");
-      currentIndex = -1; 
+      currentIndex = -1;
     }
   });
 });
+
