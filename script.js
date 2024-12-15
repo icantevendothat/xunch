@@ -7,32 +7,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo");
 
   tv.addEventListener("click", () => {
-      console.log("TV clicked!");
 
-      // Fade out h1 and logo
       h1.style.transition = "opacity 2s ease";
       h1.style.opacity = 0;
 
       logo.style.transition = "opacity 2s ease";
       logo.style.opacity = 0;
 
-      // Expand the TV
       tv.classList.add("expand");
 
-      // Wait for the TV to expand before transitioning
       setTimeout(() => {
-          content.classList.add("hidden"); // Hide the content
+          content.classList.add("hidden"); 
 
-          footer.classList.remove("hidden"); // Show the footer
+          footer.classList.remove("hidden"); 
           footer.classList.add("visible");
 
-          gridContainer.classList.remove("hidden"); // Show the grid container
+          gridContainer.classList.remove("hidden"); 
 
-          // Fade in the grid container
           setTimeout(() => {
               gridContainer.style.opacity = 1;
           }, 200);
-      }, 3000); // Match the TV expansion duration
+      }, 3000); 
   });
 });
 
