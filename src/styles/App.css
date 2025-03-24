@@ -9,6 +9,7 @@ body, html {
   height: 100%;
   overflow: hidden;
   font-family: 'VCR_OSD_MONO', sans-serif;
+  cursor: url('../fonts/xursor.png'), auto;
 }
 
 @font-face {
@@ -376,6 +377,7 @@ h1, .logo {
   .footer-logo {
       max-height: 250px;
       margin-bottom: -160px;
+      transform: translateX(5px);
       pointer-events: none;
       z-index: 2;
   }
@@ -409,7 +411,7 @@ h1, .logo {
       flex-direction: column;
       padding-left: 0px;
       padding-right: 0px;
-      padding-top: 100px;
+      padding-top: 70px;
   }
   
   .about-content img {
