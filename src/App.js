@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { client } from '../lib/sanity'; 
+import { client } from './lib/sanity'; 
 
 import Header from './components/Header';
 import Gallery from './components/Gallery';
