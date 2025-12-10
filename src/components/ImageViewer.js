@@ -14,12 +14,24 @@ function ImageViewer({ image, onClose }) {
     };
   }, [onClose]);
 
+  // Handle case where 'image' might be undefined or null initially
+  if (!image) {
+    return null;
+  }
+
   return (
     <div className="expanded-container active" onClick={onClose}>
       <div className="expanded-image" onClick={e => e.stopPropagation()}>
-        <img src={image.src} alt={image.alt} />
+        {/*
+          CHANGE: Use image.imageUrl (from Sanity GROQ)
+          CHANGE: Use image.title (from Sanity schema)
+        */}
+        <img src={image.imageUrl} alt={image.title} />
       </div>
+      
+      {/* image.caption is correct and handles HTML for links */}
       <div className="expanded-caption" dangerouslySetInnerHTML={{ __html: image.caption }} />
+      
       <button className="close-btn" onClick={onClose}>x</button>
     </div>
   );
