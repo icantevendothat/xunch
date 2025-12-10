@@ -95,18 +95,10 @@ function App() {
     setSelectedImage(null);
   };
 
-  // render a loading state if data is still fetching
   if (isLoading) {
     return (
-        <div className="app" style={{ 
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center', 
-            height: '100vh', 
-            color: 'white', 
-            fontSize: '2rem' 
-        }}>
-            Initializing System...
+        <div className="app">
+          <img src={`${process.env.PUBLIC_URL}/xunch.gif`} alt="Background" id="background-video" />
         </div>
     );
   }
