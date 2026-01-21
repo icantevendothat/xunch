@@ -384,7 +384,36 @@ h1, .logo {
 
   .expanded-container {
     flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    padding: 15px;
   }
+
+  .expanded-image {
+    flex: 1;
+    max-width: 70%;
+    margin-right: 20px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+  }
+  
+  .expanded-image img {
+    width: 100%;
+    max-height: 1000px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+  }
+  
+  .expanded-caption {
+    flex: 1;
+    color: white;
+    line-height: 1;
+    text-align: center;
+  }  
 
   .menu-container {
       position: relative;
