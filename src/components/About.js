@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
   return (
     <div className="about-content">
-      <img src={`${process.env.PUBLIC_URL}/samwil.png`} alt="About Image" className="about-image" />
+      <img src={`${process.env.PUBLIC_URL}/samwil.png`} alt="Sam Wilbert" className="about-image" />
       <div className="about-text">
         <p>
           Sam Wilbert is an NYC based Artist who specializes in videography, 
